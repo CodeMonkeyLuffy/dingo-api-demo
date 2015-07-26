@@ -87,7 +87,7 @@ class AuthenticateController extends Controller
         Cache::put($phone, $randNum, $expiresAt);
 
         // 短信内容
-        $smsTxt = '卡猫验证码为：' . $randNum . '，请在 60 秒内使用！';
+        $smsTxt = '验证码为：' . $randNum . '，请在 60 秒内使用！';
 
         // 发送验证码短信
         $res = $this->_sendSms($phone, $smsTxt);
@@ -120,7 +120,7 @@ class AuthenticateController extends Controller
         $user->save();
 
         // 短信内容
-        $smsTxt = '卡猫随机密码为：' . $randTxt . '，登录后请及时更改密码！';
+        $smsTxt = '随机密码为：' . $randTxt . '，登录后请及时更改密码！';
 
         // 发送验证码短信
         $res = $this->_sendSms($phone, $smsTxt);

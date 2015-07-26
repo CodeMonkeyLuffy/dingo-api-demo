@@ -4,7 +4,6 @@
  * 用户控制器
  */
 namespace App\Http\Controllers\Api\V1;
-use App\Task;
 
 class UserController extends BaseController
 {
